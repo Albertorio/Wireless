@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1386772427 source:c:\users\luis\desktop\c++ projects\final project est\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<cstdlib>
+	"myGraph.h"
+	"wirelessNetwork.h"
+
+1386556822 c:\users\luis\desktop\c++ projects\final project est\mygraph.h
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<queue>
+
+1386608566 source:c:\users\luis\desktop\c++ projects\final project est\mygraph.cpp
+	<iostream>
+	<fstream>
+	"myGraph.h"
+	"adListData.h"
+
+1385517629 c:\users\luis\desktop\c++ projects\final project est\adlistdata.h
+
+1386630294 source:c:\users\luis\desktop\c++ projects\final project est\wirelessnetwork.cpp
+	<cmath>
+	<cstdlib>
+	<iostream>
+	<ctime>
+	"wirelessNetwork.h"
+	"myGraph.h"
+
+1386630294 c:\users\luis\desktop\c++ projects\final project est\wirelessnetwork.h
+	"myGraph.h"
+
