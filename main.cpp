@@ -95,7 +95,7 @@ int main()
     ofstream graph2;
     W.G.gravDisplay(graph,"after");
 
-   // Experiment1();
+    Experiment1();
 
     Experiment2(N);
 
