@@ -5,12 +5,12 @@
 
 using namespace std;
 
-//funcion: inserta un nodo
+//function: insert a node
 void myGraph::addVertex(int name,float x, float y){
     Vertices.push_back(Vertex(name,x,y));
 }
 
-//funcion: inserta un arista entre dos nodos
+//function: insert an edge between nodes
 void myGraph::addEdge(int origID,int destID, float weight){
     if(origID < 0 || destID < 0){
         cout << "Invalid node index" << origID << ", " << destID << endl;
@@ -21,7 +21,7 @@ void myGraph::addEdge(int origID,int destID, float weight){
 
 }
 
-//funcion: desplega la adjacency List de cada nodo
+//function: displays de adjacency list of each node
 void myGraph::display(ostream & out){
   out << "Adjacency-List Representation: \n";
 
@@ -36,12 +36,12 @@ void myGraph::display(ostream & out){
 	cout << endl << endl;
 }
 
-//funcion: borra un nodo
+//function: delete a node
 void myGraph::deleteVertex(int n){
     Vertices.erase(Vertices.begin()+n);
 }
 
-//funcion: borra una arista
+//function: deletes an edge
 void myGraph::deleteEdge(int origID,int destID){
    for(int i=0;i<Vertices[origID].adjacencyList.size();i++){
         if(Vertices[origID].adjacencyList[i].to == destID){
@@ -54,8 +54,7 @@ void myGraph::deleteEdge(int origID,int destID){
         }
    }
 }
-
-//funcion: devuelve los vecinos de un nodo en forma de vector
+//function: returns neighbors of a node in a vector
 vector<adData> myGraph::getNeighbors(int ver){
     vector<adData> neighbors;
 
@@ -65,7 +64,7 @@ vector<adData> myGraph::getNeighbors(int ver){
 
 }
 
-//funcion: devuelve el numero total de nodos
+//function: returns total number of nodes
 int myGraph::getNumberVertices(){
     int conta =0;
 
@@ -76,7 +75,7 @@ int myGraph::getNumberVertices(){
     return conta;
 }
 
-//funcion: devuelve el numero total de aristas
+//function: returns total number of edges
 int myGraph::getNumberEdges(){
     int conta =0;
     for(int i=0;i<Vertices.size();i++){
@@ -87,7 +86,7 @@ int myGraph::getNumberEdges(){
     return conta/2;
 }
 
-//funcion: display para graphviz
+//funciton: display for graphviz
 void  myGraph::gravDisplay(ofstream & graph,string name)const{
 
     graph.open(name.c_str());
@@ -111,7 +110,7 @@ void  myGraph::gravDisplay(ofstream & graph,string name)const{
             graph.close();
 }
 
-//funcion: devuelve el grado de un nodo
+//function: returns the degree of a node
 int myGraph::degree(int ver){
     int conta;
     conta = Vertices[ver].adjacencyList.size();
@@ -119,7 +118,7 @@ int myGraph::degree(int ver){
     return conta;
 }
 
-//funcion: devuelve el grado promedio de los nodos
+//function: returns average degree of nodes
 int myGraph::aveDegree(){
     int ave;
 
@@ -127,7 +126,7 @@ int myGraph::aveDegree(){
     return ave;
 }
 
-//funcion: devuelve el grado maximo de los nodos
+//function: returns maximum degree of nodes
 int myGraph::maxDegree(){
     int maxD = degree(0);
 
